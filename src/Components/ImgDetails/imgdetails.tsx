@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 
 const ImgDetails: React.FC<any> = (props) => {
   const { selectedItem } = props;
-
+  
   return (
     <>
       <Grid container xs={12} style={{ padding: "20px" }}>
@@ -14,6 +14,7 @@ const ImgDetails: React.FC<any> = (props) => {
               alt="nothing there"
               style={{ borderRadius: "20px", height: "30vw", width: "100%" }}
             />
+            
           </div>
         </Grid>
         <Grid item xs={12} md={1} lg={1}>

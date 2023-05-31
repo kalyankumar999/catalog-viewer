@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
 import useStyles from "./styles";
 import ImgDetails from "../../Components/ImgDetails";
-import PlayCircleIcon from "@mui/icons-material/PlayCircle";
-import CarouselImage from "../../Components/ImgCarousel";
-import PauseCircleIcon from '@mui/icons-material/PauseCircle';
+import ImageCarousel from "../../Components/ImageCarousel";
+
 import {
   Orange,
   Mango,
@@ -14,9 +13,16 @@ import {
   PineApple,
   Grapes,
   Cherry,
+  PlayBtn,
+  PauseBtn
 } from "../../Asset/Images/images";
 
+
 const HomePage: React.FC<any> = () => {
+
+
+  const images = [PineApple, Orange, Mango,Kiwi,Strawberry,Grapes,Cherry,House];
+
   const initialImg = [
     {
       id: 1,
@@ -79,10 +85,12 @@ const HomePage: React.FC<any> = () => {
   const { play, btn } = useStyles();
   const [selectedItem, setSelectedItem] = useState<any>(initialImg[0]);
   const [enableAutoPlay, setEnableAutoPlay] = useState<any>(false);
-  const handleImgClick = (item: any) => {
+  const ShowImage = (item: any) => {
     
     setSelectedItem(item);
+    console.log("selectedItem",item)
   };
+  
   return (
     <Grid container xs={12}>
       <Grid item xs={12}>
@@ -90,11 +98,12 @@ const HomePage: React.FC<any> = () => {
       </Grid>
       <Grid container xs={12}>
         <Grid item xs={7}>
-          <CarouselImage
+        <ImageCarousel images={initialImg} initialImg={initialImg} ShowImage={ShowImage} enableAutoPlay={enableAutoPlay}  />
+          {/* <CarouselImage
             initialImg={initialImg}
             handleImgClick={handleImgClick}
             enableAutoPlay={enableAutoPlay}
-          />
+          /> */}
         </Grid>
         <Grid item xs={1}></Grid>
         <Grid item xs={4} className={play}>
@@ -103,10 +112,10 @@ const HomePage: React.FC<any> = () => {
             className={btn}
           >
             {
-            enableAutoPlay ?
-            <PauseCircleIcon style={{ fontSize: "3.5rem", color: "skyblue" }} />
+            !enableAutoPlay ?
+            <img src={PlayBtn} alt="" style={{width:'3.5rem',height:'55px'}} />
             :
-            <PlayCircleIcon style={{ fontSize: "3.5rem", color: "skyblue" }} />
+           <img src={PauseBtn} alt="" style={{width:'3.5rem',height:'55px'}} />
 }
           </button>
         </Grid>

@@ -8,4 +8,6 @@ import PineApple from '../Images/pineApple.avif';
 import Kiwi from '../Images/kiwi.avif';
 import Cherry from '../Images/cherry.avif';
 import Grapes from '../Images/grapes.avif';
- export  { Apple , Banana , House , Mango , Orange , Strawberry,PineApple,Kiwi,Grapes,Cherry} ;
+import PlayBtn from '../Images/play.png';
+import PauseBtn from '../Images/pause.png';
+ export  { Apple , Banana , House , Mango , Orange , Strawberry,PineApple,Kiwi,Grapes,Cherry , PlayBtn ,PauseBtn} ;
