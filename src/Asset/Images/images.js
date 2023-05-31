@@ -1,0 +1,11 @@
+import Apple from '../Images/apple.avif';
+import Banana from '../Images/banana.avif';
+import House from '../Images/house.avif';
+import Mango from '../Images/mango.avif';
+import Orange from '../Images/orange.avif';
+import Strawberry from '../Images/strawberry.avif';
+import PineApple from '../Images/pineApple.avif';
+import Kiwi from '../Images/kiwi.avif';
+import Cherry from '../Images/cherry.avif';
+import Grapes from '../Images/grapes.avif';
+ export  { Apple , Banana , House , Mango , Orange , Strawberry,PineApple,Kiwi,Grapes,Cherry} ;
